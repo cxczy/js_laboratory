@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 
 Vue.config.productionTip = false
+window.log = console.log.bind(console)
 
 /* eslint-disable no-new */
 new Vue({

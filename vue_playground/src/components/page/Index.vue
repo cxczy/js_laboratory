@@ -2,6 +2,8 @@
   <div class="hello">
     <ul>
       <router-link to="/p1" tag="li">Event Emitter</router-link>
+      <router-link to="/p2" tag="li">Canvas</router-link>
+
     </ul>
   </div>
 </template>
