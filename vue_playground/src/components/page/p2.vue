@@ -50,12 +50,21 @@
       handleDirection(d) {
         log(d)
         //todo: get sum in given direction
+        this.getSum(d)
+      },
+      getMoveSum(d) {
+        //move all blocks to given direction
+
+        //calc sum and render it on the target side
 
         //gen new random num in a block
-        this.genRandom()
+        this.genMoveRandom()
       },
-      genRandom(){
+      genMoveRandom(){
         //todo: choose a random blank block and put a num onto it
+      },
+      updateTotalSum(score) {
+        this.totalSum += score
       }
     }
 
