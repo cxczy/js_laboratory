@@ -4,7 +4,6 @@
 class Grid {
     constructor(size = 4) {
         this.size = size;
-        this.draw();
     }
 
     draw() {
@@ -28,7 +27,7 @@ class Grid {
         let gapY = sh / this.size;
         for (let i = 0; i < this.size; i++) {
             for (let j = 0; j < this.size; j++) {
-                let color = (i + j) % 2 ? '#FFF' : '#CCC';
+                let color = (i + j) % 2 ? '#FFF' : '#EEE';
                 stage.drawRect(gapX * i, gapY * j, gapX, gapY, color)
             }
         }

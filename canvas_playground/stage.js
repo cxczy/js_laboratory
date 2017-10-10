@@ -30,7 +30,7 @@ class Stage {
     }
 
     drawLine(x1, y1, x2, y2, color = '#666', lineWidth = 1) {
-        let ctx =  this.ctx;
+        let ctx = this.ctx;
         ctx.strokeStyle = color;
         ctx.lineWidth = lineWidth;
         ctx.moveTo(x1, y1);
@@ -39,17 +39,18 @@ class Stage {
     }
 
     drawRect(x, y, w, h, color) {
-        let ctx =  this.ctx;
+        let ctx = this.ctx;
         ctx.fillStyle = color;
         ctx.fillRect(x, y, w, h);
     }
 
-    addText(text, x, y, size = '24px', maxwidth = null) {
-        let ctx =  this.ctx;
+    addText(text, x, y, size = '24px', color = '#000', maxwidth = null) {
+        let ctx = this.ctx;
+        ctx.fillStyle = color;
         ctx.font = size + " serif";
         maxwidth
-            ? ctx.strokeText(text, x, y, maxwidth)
-            : ctx.strokeText(text, x, y);
+            ? ctx.fillText(text, x, y, maxwidth)
+            : ctx.fillText(text, x, y);
     }
 
 }

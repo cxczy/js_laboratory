@@ -16,12 +16,10 @@ class CImage {
         })
     }
 
-    drawImage(x, y, w = null, h = null) {
+    drawImage(x, y, w, h) {
         this.loadImage()
             .then(img => {
-                w && (img.width = w);
-                h && (img.height = h);
-                stage.ctx.drawImage(img, x, y)
+                stage.ctx.drawImage(img, x, y, w, h)
             })
     }
 }
